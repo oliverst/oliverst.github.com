@@ -53,7 +53,7 @@ So what is going on here? Well it's actually pretty simple and entirely based on
     -- method matches the given method.
 {% endhighlight %}
 
-So you give the method function a [`Method`](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#t:Method) and a handler, then the handler action will be completed if and only if the request's method is the same as the given one. If the methods do not matche the method function will call [pass](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#v:pass) and the handler will fail, resulting in the next handler being tried (`method POST indexPost`). If you want to see how exactly this happens have a look the [method function source](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/src/Snap-Internal-Types.html#method):
+So you give the method function a [`Method`](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#t:Method) and a handler, then the handler action will be completed if and only if the request's method is the same as the given one. If the methods do not match the method function will call [pass](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#v:pass) and the handler will fail, resulting in the next handler being tried (`method POST indexPost`). If you want to see how exactly this happens have a look the [method function source](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/src/Snap-Internal-Types.html#method):
 
 {% highlight haskell %}
 ------------------------------------------------------------------------------
