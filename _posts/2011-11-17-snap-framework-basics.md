@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Snap Framework Basics (WIP)
+title: Snap Framework Basics
 ---
 
 {{ page.title }}
