@@ -53,4 +53,4 @@ getAge = _age
 
 The `getAge` function's type signature is `getAge :: Person -> Int` which means that it takes a `Person` and returns an `Int`. Because of Haskell's incredibly strict type system I CAN GUARANTEE that it will not change the person's name by mistake (or on purpose). Haskell's purity guarantees that a function that is not in the IO Monad will be referentially transparent.
 
-*Note: This article is not entirely correct. I am making some terrible simplifications here. Firstly one can for example argue that even actions in the IO monad are pure. Secondly there are ways of overcoming Haskell's type restrictions namely `unsafePerformIO`. Nonetheless this frame of mind, when it comes to pure vs. inpure code suits most situations (my opinion).*
+*Note: This article is not entirely correct. I am making some terrible simplifications here. Firstly one can for example argue that even actions in the IO monad are pure. Secondly there are ways of overcoming Haskell's type restrictions, namely `unsafePerformIO`. Nonetheless this frame of mind, when it comes to pure vs. inpure code suits most situations (my opinion).*
