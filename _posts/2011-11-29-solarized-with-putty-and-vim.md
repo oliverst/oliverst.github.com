@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using the Solarized color palette with PuTTY and Vim 
+published: false
 ---
 
 {{ page.title }}
