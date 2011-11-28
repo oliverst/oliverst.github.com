@@ -56,7 +56,7 @@ So what is going on here? Well it's actually pretty simple and entirely based on
 So you give the method function a [`Method`](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#t:Method) and a handler, then the handler action will be completed if and only if the request's method is the same as the given one. If the methods do not match the method function will call [pass](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/Snap-Core.html#v:pass) and the handler will fail, resulting in the next handler being tried (`method POST indexPost`). If you want to see how exactly this happens have a look the [method function source](http://hackage.haskell.org/packages/archive/snap-core/0.6.0.1/doc/html/src/Snap-Internal-Types.html#method):
 
 {% highlight haskell %}
-------------------------------------------------------------------------------
+------------------------------------------------------------------------
 -- | Runs a 'Snap' monad action only if the request's HTTP method matches
 -- the given method.
 method :: MonadSnap m => Method -> m a -> m a
@@ -95,8 +95,8 @@ Here is a complete routing and handling example for an application that I am cur
 indexHandler = ifTop ( method GET  indexHandler'
                    <|> genericError 405 "Method Not Allowed"
                )
-           <|> error404 -- will catch any routing error (even for other request
-                         -- URIs as this is the fallback route "/")
+           <|> error404 -- will catch any routing error (even for other
+                        -- request URIs as this is the fallback route "/")
 
 generateHandler = ifTop ( method GET generateHandler'
                       <|> error405
@@ -111,7 +111,7 @@ indexHandler' = do
   writeBS $ B.pack "index page"
 
 generateHandler'  = do
-  expr <- fromMaybe "" <$> getParam "expr"\
+  expr <- fromMaybe "" <$> getParam "expr"
   -- application logic
   writeBS $ append (B.pack "API.generate: ") expr
 
@@ -129,7 +129,7 @@ genericError c s = do
   r <- getResponse
   finishWith r
 
-------------------------------------------------------------------------------
+------------------------------------------------------------------------
 -- | The main entry point handler.
 site :: Application ()
 site = route [ ("/"                           , indexHandler)
