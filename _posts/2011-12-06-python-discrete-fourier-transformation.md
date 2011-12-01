@@ -35,3 +35,5 @@ def idft(t):
         x.append(a)
     return x
 {% endhighlight %}
+
+*Note: I have only tested this in python 3.*
