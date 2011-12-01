@@ -6,7 +6,9 @@ title: Python implementation of the Discrete Fourier Transform and its Inverse
 {{ page.title }}
 ================
 
-[Fourier transformations](http://en.wikipedia.org/wiki/Discrete_Fourier_transform) are exceptionally useful for signal analysis. Here is a python implementation of the discrete fourier transform and it's inverse. *Note: computing fourier transforms like this is not efficient. If you actually need to compute fourier tranforms consider using [fast fourier transforms](http://en.wikipedia.org/wiki/Fast_Fourier_transform).*
+[Fourier transformations](http://en.wikipedia.org/wiki/Discrete_Fourier_transform) are exceptionally useful for [signal analysis](http://en.wikipedia.org/wiki/Signal_processing). Here is a python implementation of the discrete fourier transform and it's inverse. 
+
+*Note: computing fourier transforms like this is not efficient. If you actually need to compute fourier tranforms consider using [fast fourier transforms](http://en.wikipedia.org/wiki/Fast_Fourier_transform).*
 
 {% highlight python %}
 import cmath
