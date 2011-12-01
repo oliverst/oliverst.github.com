@@ -35,7 +35,7 @@ DEBUG [2011-12-05 19:49:22.639]: TP(326,395,74)=1.000000
 
 The above line means that the transition probability of going to state 395 given that we are now in state 326 and we take action 74 is 1. *You may be suprised by that fact that all transition probabilities here are 1, as this means that a certain action from a given state will always lead to the same sink state. This is because the model I am currently extracting from is completely deterministic.*
 
-So here a few things that I wanted to know from the log file and I how I extracted that information:
+So here a few things that I wanted to know from the log file and how I extracted that information:
 
 First: **How many states has the extractor discovered?**
 
