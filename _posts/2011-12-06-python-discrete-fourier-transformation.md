@@ -21,7 +21,6 @@ def dft(x):
         a = 0
         for n in range(N):
             print('n=%s', n)
-            #a += x[n]*cmath.exp(-1*2j*cmath.pi*k*n*(1/(N+1)))
             a += x[n]*cmath.exp(-2j*cmath.pi*k*n*(1/N))
         t.append(a)
     return t
