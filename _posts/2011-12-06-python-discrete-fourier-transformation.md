@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python implementation of the Discrete Fourier Transform and it's Inverse
+title: Python implementation of the Discrete Fourier Transform and its Inverse
 ---
 
 {{ page.title }}
